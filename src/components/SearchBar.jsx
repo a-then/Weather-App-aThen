@@ -10,22 +10,22 @@ const SearchBar = ({ onSearch }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (query.trim()) {
-            onSearch(query.trim());
-            setQuery('');
+            onSearch(query);
+            setQuery(''); // Clear the input after search
         }
     };
 
     return (
-        <form onSubmit={handleSubmit} style={{ display: 'flex', gap: '8px' }}>
+        <form onSubmit={handleSubmit}>
             <input
                 type="text"
                 value={query}
                 onChange={handleInputChange}
-                placeholder="Search by city, zip code, or landmark"
+                placeholder="Enter city name"
                 aria-label="Search weather"
-                style={{ flex: 1, padding: '8px' }}
+            
             />
-            <button type="submit" style={{ padding: '8px 16px' }}>
+            <button type="submit" className='search-button'>
                 Search
             </button>
         </form>

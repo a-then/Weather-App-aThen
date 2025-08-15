@@ -32,6 +32,16 @@ body {
 .condition {
   font-size: 1.25rem;
 }
+form {
+  display: 'flex';
+  gap: '8px';
+}
+.details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
 /* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
