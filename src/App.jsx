@@ -48,11 +48,14 @@ function App() {
       {weatherData && weatherData.main && weatherData.weather && (
         <>
       <header className="header">
-        <h1 className='city'>{weatherData.name}</h1>
+        {/* TODO : Get State for the US */}
+        <h1 className='city'>{weatherData.name}, {weatherData.sys.country}</h1>
         <p className='date'>Monday, 10:00 AM</p>
         <p className='temperature'>{Math.round(weatherData.main.temp)}°</p>
+        <p className='feels-like'>Feels like {Math.round(weatherData.main.feels_like)}°</p>
+        <img 
+          src={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`} alt="weather icon" />
         <p className='condition'>{weatherData.weather[0].main}</p>
-        {/* TODO : Add icon from API */}
         
       </header>
       
@@ -68,7 +71,7 @@ function App() {
         </div>
         <div className="detail-item">
           <h2>Visibility</h2>
-          <p>{weatherData.visibility*3.281} meters</p>
+          <p>{Math.round(weatherData.visibility/1609)} miles</p>
         </div>
       </section>
       </>
