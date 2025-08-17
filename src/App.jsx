@@ -7,15 +7,14 @@ const API_KEY = import.meta.env.VITE_API_KEY;
 function App() {
   const [weatherData, setWeatherData] = useState(null);
   const [city, setCity] = useState("New York");
-  const [searchQuery, setSearchQuery] = useState("");
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState("");
   
 
   const fetchWeatherData = async (cityName) => {
       try {
         setLoading(true);
-        setError(null);
+        setError("");
         
         const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}&units=imperial`;
 
@@ -48,7 +47,7 @@ function App() {
       {weatherData && weatherData.main && weatherData.weather && (
         <>
       <header className="header">
-        {/* TODO : Get State for the US */}
+        
         <h1 className='city'>{weatherData.name}</h1>
         <div className='current-temp'>
           <img 

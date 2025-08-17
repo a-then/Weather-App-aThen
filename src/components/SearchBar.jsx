@@ -20,6 +20,7 @@ const SearchBar = ({ onSearch }) => {
             <form onSubmit={handleSubmit}>
                 <input
                     type="text"
+                    name="city"
                     value={query}
                     onChange={handleInputChange}
                     placeholder="Enter city name"
