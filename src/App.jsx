@@ -51,7 +51,7 @@ function App() {
         <h1 className='city'>{weatherData.name}</h1>
         <div className='current-temp'>
           <img 
-          src={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`} alt="weather icon" />
+          src={`https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`} alt="weather icon" />
         <p className='temperature'>{Math.round(weatherData.main.temp)}°</p>
         </div>
         <p className='feels-like'>Feels like {Math.round(weatherData.main.feels_like)}°</p>
