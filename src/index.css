@@ -1,6 +1,11 @@
+/* * {
+  box-sizing: border-box;
+} */
+
 body {
   min-height: 100vh;
   min-width: 100vw;
+  color:rgb(240, 248, 255);
   background: linear-gradient(to bottom right, #60a5fa, #3b82f6);
   display: flex;
   align-items: center;
@@ -13,6 +18,66 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.form-wrapper {
+  background: rgba(255, 255, 255, 0.6);
+  width: 100%;
+  max-height: 40px;
+  min-width: 200px;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  outline: none;
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  width: 100%;
+  /* gap: 0.5rem; */
+}
+
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #333;
+  font-size: 1rem;
+  padding-left: 1rem;
+}
+
+input:focus {
+  border-bottom: 2px solid #60a5fa;
+  
+}
+
+button {
+  color: #FFF;
+  background: linear-gradient(to right, #000 50%, #0000FF 50%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+  border: 0;
+  border-radius: 0 0.5rem 0.5rem 0;
+  width: 100px;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  -ms-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
+  cursor: pointer;
+}
+button:hover {
+  background-position: right bottom;
+}
+
 .App {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 1.5rem;
@@ -20,9 +85,16 @@ body {
   min-width: 400px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 .city {
   font-size: 2.5rem;
   font-weight: bold;
+}
+.current-temp{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.5rem;
 }
 .temperature {
   font-size: 3.5rem;
@@ -32,16 +104,19 @@ body {
 .condition {
   font-size: 1.25rem;
 }
+
 form {
   display: 'flex';
   gap: '8px';
 }
+
 .details {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2rem;
 }
+
 /* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

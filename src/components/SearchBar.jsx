@@ -16,19 +16,22 @@ const SearchBar = ({ onSearch }) => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <input
-                type="text"
-                value={query}
-                onChange={handleInputChange}
-                placeholder="Enter city name"
-                aria-label="Search weather"
-            
-            />
-            <button type="submit" className='search-button'>
-                Search
-            </button>
-        </form>
+        <div className="form-wrapper">
+            <form onSubmit={handleSubmit}>
+                <input
+                    type="text"
+                    value={query}
+                    onChange={handleInputChange}
+                    placeholder="Enter city name"
+                    aria-label="Search weather"
+                    autoFocus
+
+                />
+                <button type="submit" className='search-button'>
+                    Search
+                </button>
+            </form>
+        </div>
     );
 };
 

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import SearchBar from './components/SearchBar';
+import SearchBar from './components/SearchBar'; 
 
 const API_KEY = import.meta.env.VITE_API_KEY;
 
@@ -25,7 +25,7 @@ function App() {
         setWeatherData(data);
         console.log(data)
         
-        setCity(cityName); // Update the city state with the searched city
+        setCity(cityName); 
       } catch (error) {
         setError('Failed to fetch weather data. Please try again later.');
         console.log(error.message);
@@ -49,12 +49,13 @@ function App() {
         <>
       <header className="header">
         {/* TODO : Get State for the US */}
-        <h1 className='city'>{weatherData.name}, {weatherData.sys.country}</h1>
-        <p className='date'>Monday, 10:00 AM</p>
-        <p className='temperature'>{Math.round(weatherData.main.temp)}°</p>
-        <p className='feels-like'>Feels like {Math.round(weatherData.main.feels_like)}°</p>
-        <img 
+        <h1 className='city'>{weatherData.name}</h1>
+        <div className='current-temp'>
+          <img 
           src={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`} alt="weather icon" />
+        <p className='temperature'>{Math.round(weatherData.main.temp)}°</p>
+        </div>
+        <p className='feels-like'>Feels like {Math.round(weatherData.main.feels_like)}°</p>
         <p className='condition'>{weatherData.weather[0].main}</p>
         
       </header>
