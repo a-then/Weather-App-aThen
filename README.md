@@ -1,6 +1,8 @@
 # Weather App
 
 A simple and responsive weather application built with modern web technologies. This app allows users to search for current weather conditions in any city worldwide.
+![Demo](/public/blueWeather.png)
+![Search Button disabled](/public/disabledButton.png)
 
 ## Features
 
