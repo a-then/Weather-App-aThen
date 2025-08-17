@@ -28,9 +28,13 @@ const SearchBar = ({ onSearch }) => {
                     autoFocus
 
                 />
+                {!query ? <button type="submit" className='search-button' disabled>Search
+                </button> :
+                    
                 <button type="submit" className='search-button'>
                     Search
                 </button>
+                }
             </form>
         </div>
     );
