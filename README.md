@@ -1,6 +1,6 @@
 # Weather App
 
-A simple and responsive weather application built with modern web technologies. This app allows users to search for current weather conditions in any city worldwide.
+A simple and responsive weather application built with modern web technologies. This app allows users to search for current weather conditions in any city worldwide. Try it here [live link](https://weather-app-athen.onrender.com)
 ![Demo](/public/blueWeather.png)
 ![Search Button disabled](/public/disabledButton.png)
 
